@@ -1,4 +1,4 @@
-def matriz(linhas,colunas,elemento):
+def matriz(linhas,colunas,elemento=0):
     ''' Cria uma matriz com x linhas, y colunas e z elementos, especificados pelo usuário. '''
 
     matriz=list() # cria uma lista vazia
