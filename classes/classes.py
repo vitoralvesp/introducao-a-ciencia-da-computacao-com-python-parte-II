@@ -34,11 +34,11 @@ class Movie:
         self.opinion=opinion
 
 
-killBill=Movie()
+killBill=Movie(4.5,'awesome')
 killBill.genre='action/drama'
 killBill.title='Kill Bill - Vol. 1'
 killBill.description='A woman against the world on a path of vengence.'
 killBill.director='Quentin Tarantino'
 killBill.year='2003'
 
-print(killBill.genre)
+print(killBill.opinion)
