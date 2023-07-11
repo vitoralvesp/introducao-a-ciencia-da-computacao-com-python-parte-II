@@ -1,6 +1,6 @@
 class Ordenador:
     def selecaoDireta(self,lista,reverse=False):
-        ''' (list,True/False) -> Compara o maior ou menor elemento entre um elemento da lista e seu sucessor, reorganizando a lista.  '''
+        ''' (list,True/False) -> Compara o maior ou menor elemento entre um elemento da lista e seu sucessor, reorganizando a lista. '''
 
         for i in range(len(lista)-1):
             for j in range(i+1,len(lista)):
@@ -19,25 +19,21 @@ class Ordenador:
             for j in range(i):
                 if (lista[j]>lista[j+1]):
                     lista[j],lista[j+1]=lista[j+1],lista[j]
-        
 
+    
+    def NovaBolha(self,lista):
+        ''' Otimização no Algoritmo de Ordenação Bubble Sort '''
 
-if __name__=='__main__':
+        fim=len(lista)
 
-    x=Ordenador()
-    y=Ordenador()
+        for i in range(fim-1,0,-1):
+            trocou=False
+            
+            for j in range(i):
+                if (lista[j]>lista[j+1]):
+                    lista[j],lista[j+1]=lista[j+1],lista[j]
+                    trocou=True
 
-    lista=[5,3,1,2,7,6] # Lista com os elementos sem uma ordem definida
-
-    x.selecaoDireta(lista) 
-    print('Seleção Direta: ',lista) # Lista Ordenada Crescentemente: [1, 2, 3, 5, 6, 7]
-    y.selecaoDireta(lista,True) 
-    print('Seleção Direta: ',lista) # Lista Ordenada Decrescentemente: [7, 6, 5, 3, 2, 1]
-
-    # -------- 
-
-    z=Ordenador()
-    lista_2=[2,3,7,0,9,-1]
-    z.bolha(lista_2)
-    print('\nBubble Sort: ',lista_2)
+            if not trocou:
+                return
 
