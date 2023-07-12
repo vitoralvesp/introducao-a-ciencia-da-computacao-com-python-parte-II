@@ -36,4 +36,5 @@ class Ordenador:
 
             if not trocou:
                 return
-
+            
+            
