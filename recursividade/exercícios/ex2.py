@@ -9,5 +9,3 @@ def encontra_impares(lista):
     
     return encontra_impares(lista[1:])
 
-
-print(encontra_impares([0,1,2,3,4,5,6,7,8,9]))
